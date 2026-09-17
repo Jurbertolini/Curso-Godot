@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ccx4uh4ahwp65"]
+
+[ext_resource type="Texture2D" uid="uid://0swf8cb1xt7y" path="res://icon.svg" id="1_ssles"]
+[ext_resource type="PackedScene" uid="uid://njs2vbgwmkpr" path="res://Player/player.tscn" id="2_4uk6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi74q"]
+size = Vector2(126, 128)
+
+[node name="Teste" type="Node2D" unique_id=192897749]
+
+[node name="Player" parent="." unique_id=713022056 instance=ExtResource("2_4uk6u")]
+position = Vector2(136, 197)
+
+[node name="Pedra" type="Sprite2D" parent="." unique_id=873634512]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(861, 503)
+scale = Vector2(1, 0.5)
+texture = ExtResource("1_ssles")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pedra" unique_id=1924295696]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedra/StaticBody2D" unique_id=517911832]
+shape = SubResource("RectangleShape2D_qi74q")
